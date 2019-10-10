@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styles from './Reader.module.css';
 import Controls from '../Controls/Controls';
 import Counter from '../Counter/Counter';
@@ -45,3 +46,14 @@ export default class Reader extends Component {
     );
   }
 }
+
+Reader.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  counter: PropTypes.number,
+};
