@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../Reader/Reader.module.css';
+import styles from './Counter.module.css';
 
 const Counter = ({ counter, maxCounter }) => {
   return (
